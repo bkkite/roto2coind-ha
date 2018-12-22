@@ -4,10 +4,10 @@
 
 'use strict'
 
-const TurtleCoind = require('./')
+const Roto2Coind = require('./')
 const util = require('util')
 
-var daemon = new TurtleCoind({
+var daemon = new Roto2Coind({
   loadCheckpoints: './checkpoints.csv'
   // Load additional daemon parameters here
 })
@@ -17,36 +17,36 @@ function log (message) {
 }
 
 daemon.on('start', (args) => {
-  log(util.format('TurtleCoind has started... %s', args))
+  log(util.format('Roto2Coind has started... %s', args))
 })
 
 daemon.on('started', () => {
-  log('TurtleCoind is attempting to synchronize with the network...')
+  log('Roto2Coind is attempting to synchronize with the network...')
 })
 
 daemon.on('syncing', (info) => {
-  log(util.format('TurtleCoind has synchronized %s out of %s blocks [%s%]', info.height, info.network_height, info.percent))
+  log(util.format('Roto2Coind has synchronized %s out of %s blocks [%s%]', info.height, info.network_height, info.percent))
 })
 
 daemon.on('synced', () => {
-  log('TurtleCoind is synchronized with the network...')
+  log('Roto2Coind is synchronized with the network...')
 })
 
 daemon.on('ready', (info) => {
-  log(util.format('TurtleCoind is waiting for connections at %s @ %s - %s H/s', info.height, info.difficulty, info.globalHashRate))
+  log(util.format('Roto2Coind is waiting for connections at %s @ %s - %s H/s', info.height, info.difficulty, info.globalHashRate))
 })
 
 daemon.on('desync', (daemon, network, deviance) => {
-  log(util.format('TurtleCoind is currently off the blockchain by %s blocks. Network: %s  Daemon: %s', deviance, network, daemon))
+  log(util.format('Roto2Coind is currently off the blockchain by %s blocks. Network: %s  Daemon: %s', deviance, network, daemon))
 })
 
 daemon.on('down', () => {
-  log('TurtleCoind is not responding... stopping process...')
+  log('Roto2Coind is not responding... stopping process...')
   daemon.stop()
 })
 
 daemon.on('stopped', (exitcode) => {
-  log(util.format('TurtleCoind has closed (exitcode: %s)... restarting process...', exitcode))
+  log(util.format('Roto2Coind has closed (exitcode: %s)... restarting process...', exitcode))
   daemon.start()
 })
 
