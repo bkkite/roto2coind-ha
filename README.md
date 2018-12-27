@@ -925,6 +925,7 @@ All responses except for ***auth*** return data in the same format.
 
 ## License
 
-Copyright (c) 2018, Brandon Lehmann, The TurtleCoin Developers
+Copyright (c) 2018, BKkite, The Roto2Coin Developers
+[Original]Copyright (c) 2018, Brandon Lehmann, The TurtleCoin Developers
 
 Please see the included LICENSE file for more information.
