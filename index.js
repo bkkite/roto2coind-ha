@@ -45,7 +45,7 @@ const Roto2Coind = function (opts) {
 
   // Begin Roto2Coind options
   this.path = opts.path || path.resolve(__dirname, './Roto2Coind' + ((os.platform() === 'win32') ? '.exe' : ''))
-  this.dataDir = opts.dataDir || path.resolve(os.homedir(), './.TurtleCoin')
+  this.dataDir = opts.dataDir || path.resolve(os.homedir(), './.Roto2Coin')
   this.logFile = opts.logFile || path.resolve(__dirname, './Roto2Coind.log')
   this.logLevel = opts.logLevel || 2
   this.testnet = opts.testnet || false
@@ -346,7 +346,7 @@ Roto2Coind.prototype._buildargs = function () {
   if (this.logLevel) args = util.format('%s --log-level %s', args, this.logLevel)
   if (this.testnet) args = util.format('%s --testnet', args)
   if (this.enableCors) args = util.format('%s --enable-cors %s', args, this.enableCors)
-  if (this.enableBlockExplorer) args = util.format('%s --enable-blockexplorer', args)
+  if (this.enableBlockExplorer) args = util.format('%s --enable_blockexplorer', args)
   if (this.loadCheckpoints) {
     if (fs.existsSync(path.resolve(this.loadCheckpoints))) {
       args = util.format('%s --load-checkpoints %s', args, path.resolve(this.loadCheckpoints))
