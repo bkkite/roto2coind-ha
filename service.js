@@ -23,7 +23,7 @@ var daemon = new Roto2Coind({
   // These are the standard Roto2Coind options
   path: './Roto2Coind', // Where can I find Roto2Coind?
   dataDir: '~/.Roto2Coin', // Where do you store your blockchain?
-  logLevel: 0, // Log level 0-4
+  logLevel: 1, // Log level 0-4
   testnet: false, // Use the testnet?
   enableCors: false, // Enable CORS support for the domain in this value
   enableBlockExplorer: true, // Enable the block explorer
