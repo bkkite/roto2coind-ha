@@ -172,3 +172,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 checkpoints.csv
+
+#roto2coin bin
+roto2coind
