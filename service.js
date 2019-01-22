@@ -40,7 +40,7 @@ var daemon = new Roto2Coind({
   seedNode: false, // Connect to this node to get the peer list then quit. Allows for a string.
   hideMyPort: false, // Hide from the rest of the network
   dbThreads: 2, // Number of database background threads
-  dbMaxOpenFiles: 100, // Number of allowed open files for the DB
+  dbMaxOpenFiles: 200, // Number of allowed open files for the DB
   dbWriteBufferSize: 256, // Size of the DB write buffer in MB
   dbReadCacheSize: 10, // Size of the DB read cache in MB
   feeAddress: false, // allows to specify the fee address for the node
